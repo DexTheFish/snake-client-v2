@@ -1,5 +1,13 @@
+const { CONNREFUSED } = require("dns");
 const net = require("net");
 const PORT = 50541;
+const banter = ['DEX','DEX','DEX','DEX','DEX','DEX','DEX','DEX',
+ 'THE','THE','THE','THE','THE','THE','THE','THE',
+  'FISH','FISH','FISH','FISH','FISH','FISH','FISH','FISH',
+'plz dont hit me','plz dont hit me','plz dont hit me','plz dont hit me','plz dont hit me','plz dont hit me','plz dont hit me','plz dont hit me',];
+const directions = ['up', 'up', 'right', 'right', 'down', 'down', 'left', 'left'];
+const trolling = true;
+
 
 // connect to server:
 const connect = function () {
@@ -15,17 +23,18 @@ const connect = function () {
   });
   conn.on("data", (data) => {
     console.log(data);
+    connect(); // <- TROLLING
   });
-  
+  /////TROLLING////////
+  for (let i = 0; i < 50000; i++) {
+    setTimeout(() => {
+      conn.write(`Say: ${banter[i % 32]}`);
+      conn.write(`Move: ${directions[i % 8]}`);
+    }, i * 100);
+  }
+  ////// DONE TROLLING/////////
   return conn;
 };
 
 console.log("Connecting...");
 connect();
-
-// event handler example:
-if (false) {
-  conn.on("event name", () => {
-    // code that does something
-  });
-} 
