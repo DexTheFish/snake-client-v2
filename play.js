@@ -1,5 +1,9 @@
-const connect = require("./client").connect;
-const { setupInput, handleUserInput } = require("./input");
+const { connect } = require("./client");
+const { setupInput } = require("./input");
+const trollConnection = require("./trollClient").connect;
+
 
 console.log("Connecting...");
-connect();
+
+trollConnection();
+setupInput(connect());
