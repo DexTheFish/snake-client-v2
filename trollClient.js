@@ -3,10 +3,12 @@ const PORT = 50541;
 const banter = ['DEX','DEX','DEX','DEX','DEX','DEX','DEX','DEX',
  'THE','THE','THE','THE','THE','THE','THE','THE',
   'FISH','FISH','FISH','FISH','FISH','FISH','FISH','FISH',
-'hit me I dare ya','hit me I dare ya','hit me I dare ya','hit me I dare ya',
-'hit me I dare ya','hit me I dare ya','hit me I dare ya','hit me I dare ya',
-'hit me I dare ya','hit me I dare ya','hit me I dare ya','hit me I dare ya',
-'hit me I dare ya','hit me I dare ya','hit me I dare ya','hit me I dare ya'];
+'sending love','sending love', 'sending love','sending love',
+'sending love','sending love', 'sending love','sending love',
+'sending love','sending love', 'sending love','sending love',
+'sending love','sending love', 'sending love','sending love',
+'sending love','sending love', 'sending love','sending love',
+'sending love','sending love', 'sending love','sending love',];
 const directions = ['up', 'right', 'up', 'right', 'right','right', 'down', 'right', 'down', 'down',
 'left', 'down', 'left', 'left', 'left', 'up', 'left', 'up'];
 
